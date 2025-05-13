@@ -4,6 +4,7 @@ import { MdClear } from 'react-icons/md';
 import { BiCart, BiSearch } from 'react-icons/bi';
 import { CgProfile } from 'react-icons/cg';
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useNavigate } from 'react-router';
 
 function Header() {
   const [isFragmentVisible, setIsFragmentVisible] = useState(true);
@@ -11,6 +12,13 @@ function Header() {
   const handleClearClick = () => {
     setIsFragmentVisible(false);
   };
+
+  const navigate = useNavigate();
+
+  const handleCartClick = () => {
+    navigate('/cart');
+  };
+
 
   const handleBurgerClick = () => {
     contentUl.current.classList.toggle("resp")
@@ -38,7 +46,8 @@ function Header() {
             <input type="text" placeholder='Search for products...' />
           </div>
           <div className='card-and-profile-icons'>
-            <BiCart />
+          <BiCart onClick={handleCartClick} />
+
             <CgProfile />
           </div>
         </div>
@@ -49,7 +58,7 @@ function Header() {
           </div>
           <div className='card-and-profile-icons'>
             <BiSearch color='black' />
-            <BiCart />
+            <BiCart onClick={handleCartClick} />
             <CgProfile />
           </div>
           <div className='navbar-wrapper resp__content-ul' ref={contentUl} >

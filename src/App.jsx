@@ -4,7 +4,8 @@ import Layout from './layout/Layout';
 import ProductDetails from './pages/ProductDetails/ProductDetails';
 import { ToastContainer } from 'react-toastify';
 import HomePage from './pages/Home';
-import CategoryDetails from './pages/category/categoryDetail';
+import CategoryDetails from './pages/Category/CategoryDetails';
+import cartPage from './pages/Cart/cartPage'
 
 function App() {
   return (
@@ -14,6 +15,8 @@ function App() {
         <Route index element={<HomePage />}/>
         <Route path='/category/:id' element={<CategoryDetails />}/>
         <Route path='/productDetail/:id' element={<ProductDetails />}/>
+        <Route path="/cart" element={<cartPage/>} />
+        
       </Route>
     </Routes>
     <ToastContainer/>
