@@ -76,7 +76,7 @@ const CartPage = () => {
   };
 
   const handleApplyPromo = () => {
-    if (promoCode.toLowerCase() === "discount20") {
+    if (promoCode.toLowerCase() === "komron_033") {
       setPromoApplied(true)
     } else {
       alert("Invalid promo code")

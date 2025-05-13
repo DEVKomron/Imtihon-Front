@@ -4,7 +4,7 @@ import { MdClear } from 'react-icons/md';
 import { BiCart, BiSearch } from 'react-icons/bi';
 import { CgProfile } from 'react-icons/cg';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useNavigate } from 'react-router';
+import { Link, useNavigate } from 'react-router';
 
 function Header() {
   const [isFragmentVisible, setIsFragmentVisible] = useState(true);
@@ -27,13 +27,15 @@ function Header() {
     <header>
       {isFragmentVisible && (
         <div className='header-top'>
-          <p>Sign up and get 20% off to your first order. <a href="#">Sign Up Now</a></p>
+          <p>20% Bonus Olishni Istasangiz promo Komron_033 . <a href="#">Sign Up Now</a></p>
           <MdClear className='clear-btn' onClick={handleClearClick} />
         </div>
       )}
       <div className='container'>
         <div className='navbar-wrapper'>
+          <Link to={'/'}  style={{ textDecoration: "none" }}>
           <h3>SHOP.CO</h3>
+          </Link>
           <div className='content-ul'>
             <ul>Shop
               <li>On Sale</li>
