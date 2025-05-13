@@ -7,7 +7,7 @@ import { HiOutlineArrowRight } from "react-icons/hi"
 import { HiTag } from "react-icons/hi2"
 import "./cartPage.scss"
 
-const cartPage = () => {
+const CartPage = () => {
   const [products, setProducts] = useState([])
   const [promoCode, setPromoCode] = useState("")
   const [promoApplied, setPromoApplied] = useState(false)
@@ -115,7 +115,7 @@ const cartPage = () => {
               </div>
               <h2>Your cart is empty</h2>
               <p>Looks like you haven't added anything to your cart yet.</p>
-              <a href="/category" className="continue-shopping">
+              <a href="/productDetail/2" className="continue-shopping">
                 Continue Shopping <HiArrowRight className="arrow-icon" />
               </a>
             </div>
@@ -182,4 +182,4 @@ const cartPage = () => {
   )
 }
 
-export default cartPage
+export default CartPage

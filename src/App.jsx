@@ -5,7 +5,7 @@ import ProductDetails from './pages/ProductDetails/ProductDetails';
 import { ToastContainer } from 'react-toastify';
 import HomePage from './pages/Home';
 import CategoryDetails from './pages/Category/CategoryDetails';
-import cartPage from './pages/Cart/cartPage'
+import CartPage from './pages/Cart/CartPage';
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
         <Route index element={<HomePage />}/>
         <Route path='/category/:id' element={<CategoryDetails />}/>
         <Route path='/productDetail/:id' element={<ProductDetails />}/>
-        <Route path="/cart" element={<cartPage/>} />
+        <Route path="/cart" element={<CartPage/>} />
         
       </Route>
     </Routes>

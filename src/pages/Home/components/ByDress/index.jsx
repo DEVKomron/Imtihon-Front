@@ -3,23 +3,37 @@ import './ByDress.scss';
 import { BiSolidStar } from 'react-icons/bi';
 import { GoArrowLeft, GoArrowRight } from 'react-icons/go';
 import { FcApproval } from 'react-icons/fc';
+import { Link } from 'react-router';
 
 function ByDress() {
   return (
     <div className='container'>
       <div className='dress-wrapper'>
 
+        {/* import {Link} from 'react-router-dom'; */}
+
         <div className='img-wrapper'>
           <h3>BROWSE BY DRESS STYLE</h3>
+
           <div className='img-row'>
-            <img style={{ width: "408px", height: "289px" }} src="/src/assets/bd1_item.png" alt="bd1" />
-            <img style={{ width: "684px", height: "289px" }} src="/src/assets/bd2_item.png" alt="bd2" />
+            <Link to="/category/1">
+              <img style={{ width: "408px", height: "289px" }} src="/src/assets/bd1_item.png" alt="bd1" />
+            </Link>
+            <Link to="/category/2">
+              <img style={{ width: "684px", height: "289px" }} src="/src/assets/bd2_item.png" alt="bd2" />
+            </Link>
           </div>
+
           <div className='img-row'>
-            <img style={{ width: "684px", height: "289px" }} src="/src/assets/bd3_item.png" alt="bd3" />
-            <img style={{ width: "408px", height: "289px" }} src="/src/assets/bd4_item.png" alt="bd4" />
+            <Link to="/category/1">
+              <img style={{ width: "684px", height: "289px" }} src="/src/assets/bd3_item.png" alt="bd3" />
+            </Link>
+            <Link to="/category/2">
+              <img style={{ width: "408px", height: "289px" }} src="/src/assets/bd4_item.png" alt="bd4" />
+            </Link>
           </div>
         </div>
+
 
         <div className='coments'>
           <div className='customers'>

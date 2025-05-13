@@ -55,7 +55,6 @@ function ProductDetails() {
     let cart = JSON.parse(localStorage.getItem("products") || "[]");
   
     const existingIndex = cart.findIndex(item => item.id === product.id && item.size === selectedSize && item.color === selectedColor);
-    Add
     if (existingIndex !== -1) {
       cart[existingIndex].quantity += quantity;
     } else {
